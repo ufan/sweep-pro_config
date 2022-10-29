@@ -48,22 +48,28 @@
                 
      		default_layer {
             label = "CLMK";
-        		bindings = <
-            		&kp Q     &kp W      &kp F      &kp P      &kp B         &kp J     &kp L      &kp U      &kp Y      &kp SQT
-             		&lt SYM A &mt LALT R &mt LSFT S &mt LCTL T &kp G         &kp M     &mt RCTL N &mt RSFT E &mt RALT I &lt SYM O 
-                &kp Z     &kp X      &kp C      &lt MSE D  &kp V         &kp K     &lt MSE H  &cmqus     &dtsmi     &kp RC(B)
-                &none  &none  &hello  &lt FUN TAB  &lt NUM SPACE         &lt NUM RET &lt FUN BSPC &encoder  &none   &none
+// -----------------------------------------------------------------------------------------
+//        |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | 
+//        |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
+//        |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | 
+//                    | RSE | SPC | LWR |   | LWR | BKSP | RSE |
+        		
+			bindings = <
+            	&kp Q     &kp W      &kp E      &kp R      &kp T         &kp Y     &kp U      &kp I      &kp O      &kp P
+             	&lt SYM A &mt LALT S &mt LSFT D &mt LCTL F &kp G         &kp  H    &mt RCTL J &mt RSFT K &mt RALT L &lt SYM SEMI 
+                &kp Z     &kp X      &kp C      &lt MSE V  &kp B         &kp N     &lt MSE M  &kp COMMA &kp DOT &kp FSLH
+                &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM RET         &lt NUM ESC &lt FUN BSPC &kp C_PLAY_PAUSE  &none   &none
          		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_de_kp C_PREVIOUS C_NEXT>;
 		    };
 
         number_layer {
             label = "NUM";
             bindings = <
-                &bt BT_NXT  &mkp MB4  &kp UP    &mkp MB5   &spc1      &kp PLUS    &kp N7  &kp N8  &kp N9  &kp MINUS
-                &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT  &spc2      &kp ASTRK   &kp N4  &kp N5  &kp N6  &kp FSLH
-                &bt BT_CLR  &prv_tab  &none     &nxt_tab   &spc3      &kp EQUAL   &kp N1  &kp N2  &kp N3  &kp DOT
-                           &none  &none  &hello  &spc4  &kp HOME      &kp END     &kp N0  &encoder  &none  &none
+                &kp UP  &kp LEFT  &kp DOWN    &kp RIGHT   &kp F4      &kp MINUS    &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                &kp N6   &kp N7  &kp N8  &kp N9  &kp N0
+                &kp EXCLAMATION  &kp QUESTION  &kp LESS_THAN   &kp GREATER_THAN   &spc3      &kp UNDERSCORE   &kp COLON  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
+                           &none  &none  &trans  &trans  &trans      &kp K_APPLICATION     &trans  &trans  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -71,9 +77,9 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-                &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp AMPS  &kp CARET  &kp LBRC  &kp RBRC  &none
-                &kp GRAVE &kp EXCL  &kp MINUS &kp PLUS &kp EQUAL      &kp PIPE  &kp COLON  &kp LPAR  &kp RPAR  &kp AT
-                &none     &none     &kp SLASH &kp STAR &kp BSLH       &kp HASH  &kp DLLR   &kp LBKT  &kp RBKT  &none  
+                &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp AMPS  &kp CARET  &kp HOME  &kp PAGE_UP  &none
+                &kp C_VOL_UP &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE      &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt
+                &kp C_VOL_DN   &kp AT &kp HASH &kp DLLR &kp PRCNT       &kp HASH  &kp DLLR   &kp END  &kp PAGE_DOWN  &none  
                              &none  &none  &hello  &none  &none       &none  &none  &encoder  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -93,9 +99,9 @@
         mouse_layer {
             label = "MSE";
             bindings = <
-                &none  &none       &mmv MMV_U  &none       &none       &none  &none       &mwh MWH_U  &none       &none
-                &none  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &none       &none  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &none
-                &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
+                &bt BT_PRV  &bt BT_NXT       &mmv MMV_U  &none       &none       &none  &none       &mwh MWH_U  &none       &none
+                &bt BT_CLR  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &none       &none  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &none
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &none  &none       &none       &none       &none
                 &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
