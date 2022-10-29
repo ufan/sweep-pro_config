@@ -54,7 +54,7 @@
                 &kp Z     &kp X      &kp C      &lt MSE V  &kp B         &kp N    &lt MSE M  &kp COMMA &kp DOT &kp FSLH
                 &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM RET         &lt NUM ESC &mt RSFT BSPC &kp C_PLAY_PAUSE  &none   &none
          		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_de_kp C_PREVIOUS C_NEXT>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
 		    };
 
         number_layer {
