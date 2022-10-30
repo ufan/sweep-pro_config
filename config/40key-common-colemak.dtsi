@@ -94,7 +94,7 @@
         mouse_layer {
             label = "MSE";
             bindings = <
-                &bt BT_CLR  &bt BT_NXT       &mmv MMV_U  &none       &kp C_BRIGHTNESS_INC            &kp C_AC_ZOOM_IN  &none       &mwh MWH_U  &none       &none
+                &bt BT_CLR  &bt BT_NXT       &mmv MMV_U  &none       &kp C_BRIGHTNESS_INC            &kp C_AC_ZOOM_IN  &kp C_SLEEP       &mwh MWH_U  &none       &none
                 &bt BT_PRV  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &kp C_BRIGHTNESS_DEC                 &kp C_AC_ZOOM_OUT  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &none
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_AC_ZOOM  &none       &none       &none       &none
                 &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
@@ -105,7 +105,7 @@
 	dvorak_layer {
             label = "DVRK";
 			bindings = <
-            	&kp Q     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
+            	&kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
              	&mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
                 &kp SEMI    &kp Q      &kp J      &lt MSE K  &kp X         &kp B    &lt MSE M  &kp W &kp V &kp Z
                 &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM RET         &lt NUM ESC &mt RSFT BSPC &kp C_PLAY_PAUSE  &none   &none
