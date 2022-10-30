@@ -206,7 +206,7 @@
         combo_lnum {
             timeout-ms = <50>;
             key-positions = <34 35>;
-            bindings = <&tog NUM>;
+            bindings = <&tog DVRK>;
         };
 
         // output selection
