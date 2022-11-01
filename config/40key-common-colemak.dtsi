@@ -72,7 +72,7 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-                &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp AMPS  &kp CARET  &kp HOME  &kp PAGE_UP  &none
+                &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp LC(MINUS)  &kp LC(PLUS)  &kp HOME  &kp PAGE_UP  &none
                 &kp C_VOL_UP &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE      &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
                 &kp C_VOL_DN   &kp AT &kp HASH &kp DLLR &kp PRCNT       &kp HASH  &kp DLLR   &kp END  &kp PAGE_DOWN  &none  
                              &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM ESC       &kp C_PLAY_PAUSE  &kp ESC  &kp C_PLAY_PAUSE  &none  &none
@@ -108,9 +108,9 @@
             	&kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
              	&mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
                 &kp SEMI    &kp Q      &kp J      &lt MSE K  &kp X         &kp B    &lt MSE M  &kp W &kp V &kp Z
-                &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM ESC         &lt NUM RET &mt RSFT BSPC &kp C_PLAY_PAUSE  &none   &none
+                &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM ESC         &lt NUM RET &mt RSFT BSPC &kp LS(TAB)  &none   &none
          		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
 		    };
 	
    	};
