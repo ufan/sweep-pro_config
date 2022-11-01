@@ -116,17 +116,6 @@
             bindings = <&kp PG_DN>;
         };
 
-         combo_win_left {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp LS(LG(LEFT))>;
-        };
-
-         combo_win_right {
-            timeout-ms = <50>;
-            key-positions = <9 18>;
-            bindings = <&kp LS(LG(RIGHT))>;
-        };
  
          combo_rdelete {
             timeout-ms = <50>;
@@ -186,7 +175,7 @@
         // symbols
         combo_underscore {
             timeout-ms = <50>;
-            key-positions = <11 12>;
+            key-positions = <10 11>;
             bindings = <&kp UNDERSCORE>;
         };
 
@@ -225,31 +214,31 @@
         // ble selection
         combo_ble1 {
             timeout-ms = <50>;
-            key-positions = <14 24>;
+            key-positions = <4 20>;
             bindings = <&bt BT_SEL 0>;
         };
 
         combo_ble2 {
             timeout-ms = <50>;
-            key-positions = <13 23>;
+            key-positions = <3 24>;
             bindings = <&bt BT_SEL 1>;
         };
 
         combo_ble3 {
             timeout-ms = <50>;
-            key-positions = <12 22>;
+            key-positions = <2 23>;
             bindings = <&bt BT_SEL 2>;
         };
 
         combo_ble4 {
             timeout-ms = <50>;
-            key-positions = <11 21>;
+            key-positions = <1 22>;
             bindings = <&bt BT_SEL 3>;
         };
 
         combo_ble5 {
             timeout-ms = <50>;
-            key-positions = <10 20>;
+            key-positions = <0 21>;
             bindings = <&bt BT_SEL 4>;
         };
     };
