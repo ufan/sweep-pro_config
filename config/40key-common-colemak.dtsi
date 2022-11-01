@@ -6,7 +6,7 @@
 
 #define DEFAULT 0
 #define NUM     1
-#define READ     2
+#define SYM     2
 #define FUN     3
 #define MSE     4
 #define DVRK    5
@@ -70,7 +70,7 @@
         };
 
         symbol_layer {
-            label = "Read";
+            label = "SYM";
             bindings = <
                 &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp AMPS  &kp CARET  &kp HOME  &kp PAGE_UP  &none
                 &kp C_VOL_UP &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE      &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
