@@ -133,13 +133,13 @@
         combo_zoomin {
             timeout-ms = <50>;
             key-positions = <3 4>;
-            bindings = <&kp LC(PLUS)>;
+            bindings = <&kp TAB>;
         };
  
         combo_zoomout {
             timeout-ms = <50>;
             key-positions = <23 24>;
-            bindings = <&kp LC(MINUS)>;
+            bindings = <&kp LC(PLUS)>;
         };
  
         combo_pgdn {
