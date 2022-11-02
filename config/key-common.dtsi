@@ -83,7 +83,7 @@
          combo_lgui {
             timeout-ms = <50>;
             key-positions = <5 6>;
-            bindings = <&kp LGUI>;
+            bindings = <&kp C_PLAY_PAUSE>;
         };
         
          combo_fullscreen {
@@ -139,7 +139,7 @@
         combo_zoomout {
             timeout-ms = <50>;
             key-positions = <23 24>;
-            bindings = <&kp LC(PLUS)>;
+            bindings = <&kp GRAVE>;
         };
  
         combo_pgdn {
@@ -220,25 +220,25 @@
 
         combo_ble2 {
             timeout-ms = <50>;
-            key-positions = <3 24>;
+            key-positions = <3 20>;
             bindings = <&bt BT_SEL 1>;
         };
 
         combo_ble3 {
             timeout-ms = <50>;
-            key-positions = <2 23>;
+            key-positions = <2 20>;
             bindings = <&bt BT_SEL 2>;
         };
 
         combo_ble4 {
             timeout-ms = <50>;
-            key-positions = <1 22>;
+            key-positions = <1 20>;
             bindings = <&bt BT_SEL 3>;
         };
 
         combo_ble5 {
             timeout-ms = <50>;
-            key-positions = <0 21>;
+            key-positions = <0 20>;
             bindings = <&bt BT_SEL 4>;
         };
     };
