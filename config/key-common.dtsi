@@ -220,25 +220,25 @@
 
         combo_ble2 {
             timeout-ms = <50>;
-            key-positions = <3 23>;
+            key-positions = <3 20>;
             bindings = <&bt BT_SEL 1>;
         };
 
         combo_ble3 {
             timeout-ms = <50>;
-            key-positions = <2 22>;
+            key-positions = <2 20>;
             bindings = <&bt BT_SEL 2>;
         };
 
         combo_ble4 {
             timeout-ms = <50>;
-            key-positions = <1 21>;
+            key-positions = <1 20>;
             bindings = <&bt BT_SEL 3>;
         };
 
         combo_ble5 {
             timeout-ms = <50>;
-            key-positions = <0 29>;
+            key-positions = <0 20>;
             bindings = <&bt BT_SEL 4>;
         };
     };
