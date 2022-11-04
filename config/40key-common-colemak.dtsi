@@ -5,11 +5,12 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define NUM     1
-#define SYM     2
-#define FUN     3
-#define MSE     4
-#define DVRK    5
+#define DVRK    1
+#define NUM     2
+#define SYM     3
+#define FUN     4
+#define MSE     5
+
 
 #include "key-common.dtsi"
 
@@ -57,6 +58,17 @@
          		>;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
 		    };
+		    
+		    	dvorak_layer {
+            label = "DVRK";
+			bindings = <
+            	&kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
+             	&mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
+                &kp SEMI    &kp Q      &kp J      &lt MSE K  &kp X         &kp B    &lt MSE M  &kp W &kp V &kp Z
+                &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM ESC         &lt NUM RET &mt RSFT BSPC &kp LS(TAB)  &none   &none
+         		>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+		    };
 
         number_layer {
             label = "NUM";
@@ -102,16 +114,7 @@
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 	
-	dvorak_layer {
-            label = "DVRK";
-			bindings = <
-            	&kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
-             	&mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
-                &kp SEMI    &kp Q      &kp J      &lt MSE K  &kp X         &kp B    &lt MSE M  &kp W &kp V &kp Z
-                &none  &none  &kp TAB  &lt NUM SPACE  &lt SYM ESC         &lt NUM RET &mt RSFT BSPC &kp LS(TAB)  &none   &none
-         		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
-		    };
+
 	
    	};
 };
