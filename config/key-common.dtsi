@@ -80,11 +80,7 @@
             bindings = <&kp ESC>;
         };
         
-         combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <5 6>;
-            bindings = <&kp C_PLAY_PAUSE>;
-        };
+
         
          combo_fullscreen {
             timeout-ms = <50>;
