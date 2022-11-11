@@ -81,13 +81,6 @@
         };
         
 
-        
-         combo_fullscreen {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            bindings = <&kp F11>;
-        };
-        
          combo_wkspc_up {
             timeout-ms = <50>;
             key-positions = <6 7>;
@@ -132,11 +125,7 @@
             bindings = <&kp TAB>;
         };
  
-        combo_zoomout {
-            timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp GRAVE>;
-        };
+
  
         combo_pgdn {
             timeout-ms = <50>;
@@ -150,11 +139,7 @@
             bindings = <&kp PG_UP>;
         };
  
-        combo_mb_lclick {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&mkp LCLK>;
-        };
+
 
          combo_mb_rclick {
             timeout-ms = <50>;
