@@ -116,7 +116,7 @@
         };
 	
 	cangjie_layer {
-            label = "Cangjie";
+            label = "QWE";
 			bindings = <
             		&kp A     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp P
              		&mt LWIN Q &mt LALT S &mt LSFT D &mt LCTL F &kp G         &kp H    &mt RCTL J &mt RSFT K &mt RALT L &mt RWIN P 
