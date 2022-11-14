@@ -10,7 +10,7 @@
 #define SYM     3
 #define FUN     4
 #define MSE     5
-#difine QWE     6
+#define QWE     6
 
 
 #include "key-common.dtsi"
@@ -123,7 +123,7 @@
                 &kp Z     &kp X      &kp C      &kp V  &kp B         &kp N    &kp M  &kp COMMA &kp DOT &kp FSLH
                 &none  &none  &kp TAB  &lt NUM SPACE  &kp BSPC         &lt MSE RET &kp BSPC &kp C_PLAY_PAUSE  &none   &none
          		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_PREVIOUS C_NEXT>;
 		    };
 
 	
