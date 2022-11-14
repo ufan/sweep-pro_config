@@ -71,27 +71,18 @@
     };
 
     // combos
- 
-
-
-
-
-        
          combo_win_down {
             timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp PG_DN>;
         };
- 
+        
 
- 
         combo_zoomin {
             timeout-ms = <50>;
             key-positions = <3 4>;
             bindings = <&kp TAB>;
         };
- 
-
  
         combo_pgdn {
             timeout-ms = <50>;
@@ -99,9 +90,6 @@
             bindings = <&kp PG_DN>;
         };
  
-
-
-
          combo_mb_rclick {
             timeout-ms = <50>;
             key-positions = <22 23>;
