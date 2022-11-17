@@ -105,12 +105,6 @@
             bindings = <&mkp MCLK>;
         };
  
-        // symbols
-        combo_underscore {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp UNDERSCORE>;
-        };
 
         // others
         combo_capswd {
