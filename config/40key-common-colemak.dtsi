@@ -129,3 +129,105 @@
 	
    	};
 };
+
+
+    // combos
+     combos {
+         compatible = "zmk,combos";
+      
+         combo_win_down {
+            timeout-ms = <50>;
+            key-positions = <27 28>;
+            bindings = <&kp PG_DN>;
+        };
+        
+
+        combo_zoomin {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp TAB>;
+        };
+ 
+        combo_pgdn {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp PG_DN>;
+        };
+ 
+        combo_mb_rclick {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&mkp RCLK>;
+        };
+
+         combo_mb_mclick {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&mkp MCLK>;
+        };
+ 
+
+        // others
+        combo_capswd {
+            timeout-ms = <50>;
+            key-positions = <2 7>;
+            bindings = <&caps_word>;
+        };
+
+        combo_lsym {
+            timeout-ms = <50>;
+            key-positions = <33 36>;
+            bindings = <&tog SYM>;
+        };
+
+        combo_lnum {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&tog DVRK>;
+        };
+
+        // output selection
+        combo_outble {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            bindings = <&out OUT_USB>;
+        };
+ 
+        combo_outtog {
+            timeout-ms = <50>;
+            key-positions = <4 24>;
+            bindings = <&out OUT_TOG>;
+        };
+
+        // ble selection
+        combo_ble1 {
+            timeout-ms = <50>;
+            key-positions = <4 20>;
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        combo_ble2 {
+            timeout-ms = <50>;
+            key-positions = <3 20>;
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        combo_ble3 {
+            timeout-ms = <50>;
+            key-positions = <2 20>;
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        combo_ble4 {
+            timeout-ms = <50>;
+            key-positions = <1 20>;
+            bindings = <&bt BT_SEL 3>;
+        };
+
+        combo_ble5 {
+            timeout-ms = <50>;
+            key-positions = <0 20>;
+            bindings = <&bt BT_SEL 4>;
+        };
+    };
+};
