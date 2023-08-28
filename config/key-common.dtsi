@@ -128,7 +128,7 @@
         combo_lmedia {
             timeout-ms = <50>;
             key-positions = <4 34>;
-            bindings = <&tog DVRK>;
+            bindings = <&tog SYM>;
         };
 
         // output selection
