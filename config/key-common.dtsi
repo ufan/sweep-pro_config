@@ -115,13 +115,19 @@
 
         combo_lsym {
             timeout-ms = <50>;
-            key-positions = <33 36>;
+            key-positions = <34 36>;
             bindings = <&tog SYM>;
         };
 
         combo_lnum {
             timeout-ms = <50>;
-            key-positions = <34 35>;
+            key-positions = <33 35>;
+            bindings = <&tog DVRK>;
+        };
+
+        combo_lmedia {
+            timeout-ms = <50>;
+            key-positions = <4 34>;
             bindings = <&tog DVRK>;
         };
 
