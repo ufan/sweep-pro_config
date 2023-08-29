@@ -22,10 +22,10 @@
 };
 
 // mouse move settings
-#define MMV_U MOVE_VERT(-650)
-#define MMV_D MOVE_VERT(650)
-#define MMV_L MOVE_HOR(-650)
-#define MMV_R MOVE_HOR(650)
+#define MMV_U MOVE_VERT(-1650)
+#define MMV_D MOVE_VERT(1650)
+#define MMV_L MOVE_HOR(-1650)
+#define MMV_R MOVE_HOR(1650)
 
 &mmv {    
         time-to-max-speed-ms = <500>;
@@ -85,9 +85,9 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-                &kp C_POWER     &kp LEFT &kp SLASH    &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp SLASH  &kp LC(PLUS)  &kp HOME  &kp PAGE_UP  &kp TILDE
-                &kp C_VOL_UP &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp C_MUTE      &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
-                &kp C_VOL_DN   &kp AT &kp HASH &kp DLLR &kp C_BRIGHTNESS_DEC       &kp PLUS  &kp SEMICOLON   &kp END  &kp PAGE_DOWN  &kp DELETE  
+                &kp C_POWER    &kp LEFT       &kp MMV_U         &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp SLASH  &kp LC(PLUS)  &kp HOME  &kp PAGE_UP  &kp TILDE
+                &kp C_VOL_UP   &kp C_PREVIOUS &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE                &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
+                &kp C_VOL_DN   &kp AT         &kp MMV_D          &kp DLLR    &kp C_BRIGHTNESS_DEC       &kp PLUS  &kp SEMICOLON   &kp END  &kp PAGE_DOWN  &kp DELETE  
                              &none  &none  &kp TAB  &lt MSE SPACE  &lt SYM ESC       &kp C_PLAY_PAUSE  &kp ESC  &kp C_PLAY_PAUSE  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
@@ -120,7 +120,7 @@
 			bindings = <
             		&kp A     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp P
              		&mt LWIN Q &mt LALT S &mt LSFT D &mt LCTL F &kp G         &kp H    &mt RCTL J &mt RSFT K &mt RALT L &mt RWIN P 
-                &kp Z     &kp X      &kp C      &kp V  &kp B         &kp N    &kp M  &kp COMMA &kp DOT &kp FSLH
+                &kp Z     &kp X      &kp C      &kp V  &kp B         &kp N    &kp M  &kp D &kp N &kp Q
                 &none  &none  &kp TAB  &lt NUM SPACE  &kp BSPC         &lt MSE RET &kp BSPC &kp C_PLAY_PAUSE  &none   &none
          		>;
             sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_PREVIOUS C_NEXT>;
