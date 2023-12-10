@@ -107,7 +107,7 @@
         mouse_layer {
             label = "MSE";
             bindings = <
-                &bt BT_CLR  &bt BT_NXT       &mmv MMV_U  &mkp LCLK     &mkp RCLK             &kp C_BRIGHTNESS_INC  &kp PAGE_UP   &mwh MWH_U  &kp PAGE_DOWN    &kp C_POWER
+                &mkp RCLK  &mkp MCLK   &mmv MMV_U  &mkp LCLK   &bt BT_CLR          &kp C_BRIGHTNESS_INC  &kp PAGE_UP   &mwh MWH_U  &kp PAGE_DOWN    &kp C_POWER
                 &mkp LCLK  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &mkp MCLK                  &kp C_BRIGHTNESS_DEC  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &kp K_POWER
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_BACKLIGHT_TOGGLE  &kp K_APP      &none       &kp K_LOCK       &kp C_SLEEP_MODE
                 &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
