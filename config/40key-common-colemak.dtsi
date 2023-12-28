@@ -5,10 +5,13 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
-#define NUM     1
-#define SYM     2
-#define FUN     3
-#define MSE     4
+#define DVRK    1
+#define NUM     2
+#define SYM     3
+#define FUN     4
+#define MSE     5
+#define QWE     6
+
 
 #include "key-common.dtsi"
 
@@ -19,10 +22,10 @@
 };
 
 // mouse move settings
-#define MMV_U MOVE_VERT(-650)
-#define MMV_D MOVE_VERT(650)
-#define MMV_L MOVE_HOR(-650)
-#define MMV_R MOVE_HOR(650)
+#define MMV_U MOVE_VERT(-1200)
+#define MMV_D MOVE_VERT(1200)
+#define MMV_L MOVE_HOR(-1200)
+#define MMV_R MOVE_HOR(1200)
 
 &mmv {    
         time-to-max-speed-ms = <500>;
@@ -47,23 +50,34 @@
         compatible = "zmk,keymap";
                 
      		default_layer {
-            label = "CLMK";
-        		bindings = <
-            		&kp Q     &kp W      &kp F      &kp P      &kp B         &kp J     &kp L      &kp U      &kp Y      &kp SQT
-             		&lt SYM A &mt LALT R &mt LSFT S &mt LCTL T &kp G         &kp M     &mt RCTL N &mt RSFT E &mt RALT I &lt SYM O 
-                &kp Z     &kp X      &kp C      &lt MSE D  &kp V         &kp K     &lt MSE H  &cmqus     &dtsmi     &kp RC(B)
-                &none  &none  &hello  &lt FUN TAB  &lt NUM SPACE         &lt NUM RET &lt FUN BSPC &encoder  &none   &none
+            label = "Marx";
+			bindings = <
+            		&kp Q     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp P
+             		&mt LWIN A &mt LALT B &mt LSFT V &mt LCTL F &kp G         &kp H    &mt RCTL N &mt RSFT M &mt RALT L &mt RWIN C 
+                &kp Z     &kp X      &kp K      &kp D  &kp S         &kp K    &kp J  &kp COMMA &kp DOT &kp S
+                &none  &none  &tog SYM    &lt SYM ESC  &lt NUM SPACE     &lt QWE BSPC  &lt MSE RET  &kp C_PLAY_PAUSE  &none   &none
          		>;
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
+		    };
+		    
+		    	dvorak_layer {
+            label = "DVRK";
+			bindings = <
+            	&kp SINGLE_QUOTE     &kp COMMA   &kp DOT   &kp P   &kp Y         &kp F    &kp G     &kp C      &kp R      &kp L
+             	&mt LWIN A &mt LALT O &mt LSFT E &mt LCTL U &kp I         &kp D    &mt RCTL H &mt RSFT T &mt RALT N &mt RWIN S 
+                &kp SEMI    &kp Q      &kp J      &lt MSE K  &kp X         &kp B    &lt MSE M  &kp W &kp V &kp Z
+                &none  &none  &tog DVRK  &lt SYM ESC  &lt NUM SPACE       &lt QWE BSPC  &lt MSE RET  &kp C_PLAY_PAUSE  &none   &none
+         		>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
 		    };
 
         number_layer {
             label = "NUM";
             bindings = <
-                &bt BT_NXT  &mkp MB4  &kp UP    &mkp MB5   &spc1      &kp PLUS    &kp N7  &kp N8  &kp N9  &kp MINUS
-                &bt BT_PRV  &kp LEFT  &kp DOWN  &kp RIGHT  &spc2      &kp ASTRK   &kp N4  &kp N5  &kp N6  &kp FSLH
-                &bt BT_CLR  &prv_tab  &none     &nxt_tab   &spc3      &kp EQUAL   &kp N1  &kp N2  &kp N3  &kp DOT
-                           &none  &none  &hello  &spc4  &kp HOME      &kp END     &kp N0  &encoder  &none  &none
+                &kp UP  &kp LEFT  &kp DOWN   &kp RIGHT   &kp F4      &kp MINUS    &kp SEMI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SLASH
+                &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                &kp N6   &mt RCTL N7  &mt RSFT N8  &mt RALT N9  &mt RWIN N0
+                &kp EXCLAMATION  &kp QUESTION  &kp LESS_THAN   &kp GREATER_THAN   &kp GRAVE     &kp UNDERSCORE   &kp COLON  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SINGLE_QUOTE
+                           &none  &none  &kp LS(TAB)  &none  &none     &kp BSPC   &kp K_MENU  &none  &none  &none
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -71,12 +85,12 @@
         symbol_layer {
             label = "SYM";
             bindings = <
-                &none     &kp TILDE &kp LT    &kp GT   &kp PRCNT      &kp AMPS  &kp CARET  &kp LBRC  &kp RBRC  &none
-                &kp GRAVE &kp EXCL  &kp MINUS &kp PLUS &kp EQUAL      &kp PIPE  &kp COLON  &kp LPAR  &kp RPAR  &kp AT
-                &none     &none     &kp SLASH &kp STAR &kp BSLH       &kp HASH  &kp DLLR   &kp LBKT  &kp RBKT  &none  
-                             &none  &none  &hello  &none  &none       &none  &none  &encoder  &none  &none
+                &kp C_VOL_UP    &kp LEFT       &mwh MWH_U         &kp RIGHT   &kp C_BRIGHTNESS_INC      &kp BACKSLASH  &kp C_VOICE_COMMAND  &kp HOME  &kp PAGE_UP  &kp TILDE
+                &kp C_POWER   &kp C_PREVIOUS &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_MUTE                &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
+                &kp C_VOL_DN   &kp AT         &mwh MWH_D          &kp BSPC    &kp C_BRIGHTNESS_DEC       &kp PLUS  &kp SEMICOLON   &kp END  &kp PAGE_DOWN  &kp TILDE2  
+                             &none  &none  &kp TAB  &lt MSE SPACE  &lt SYM ESC       &kp C_PLAY_PAUSE  &kp ESC  &kp C_PLAY_PAUSE  &none  &none
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp C_PREVIOUS C_NEXT>;
         };
 
         function_layer {
@@ -93,12 +107,25 @@
         mouse_layer {
             label = "MSE";
             bindings = <
-                &none  &none       &mmv MMV_U  &none       &none       &none  &none       &mwh MWH_U  &none       &none
-                &none  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &none       &none  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &none
-                &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
+                &mkp RCLK  &mkp MCLK   &mmv MMV_U  &mkp LCLK   &bt BT_CLR          &kp C_BRIGHTNESS_INC  &kp PAGE_UP   &mwh MWH_U  &kp PAGE_DOWN    &kp C_POWER
+                &mkp LCLK  &mmv MMV_L  &mmv MMV_D  &mmv MMV_R  &mkp MCLK                  &kp C_BRIGHTNESS_DEC  &mwh MWH_L  &mwh MWH_D  &mwh MWH_R  &kp K_POWER
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp C_BACKLIGHT_TOGGLE  &kp K_APP      &none       &kp K_LOCK       &kp C_SLEEP_MODE
                 &none  &none       &none       &none       &none       &none  &none       &none       &none       &none
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
+	
+	cangjie_layer {
+            label = "QWE";
+			bindings = <
+            		&kp A     &kp W      &kp E      &kp R      &kp T         &kp Y    &kp U      &kp I      &kp O      &kp A
+             		&mt LWIN Q &mt LALT S &mt LSFT D &mt LCTL F &kp G         &kp H    &mt RCTL J &mt RSFT K &mt RALT L &mt RWIN P 
+                &kp Z     &kp X      &kp C      &kp V  &kp B         &kp N    &kp M  &kp Y &kp N &kp B
+                &none  &none  &kp TAB  &kp BSPC  &kp SPACE         &lt MSE RET &kp BSPC &kp C_PLAY_PAUSE  &none   &none
+         		>;
+            sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_PREVIOUS C_NEXT>;
+		    };
+
+	
    	};
 };
